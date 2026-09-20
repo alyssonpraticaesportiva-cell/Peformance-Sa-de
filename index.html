@@ -7,6 +7,11 @@
 
 <script>
   var URL_DO_SISTEMA = "https://script.google.com/a/macros/ffpg.edu.br/s/AKfycbwGrqkY38kyL_V-OT3lG7D6QTiLmrxkF6ch3fUbHeIZDnr1ZUdWfYRKWa5sGNLvHVrxuQ/exec";
+  var abertoPeloIcone = (window.navigator.standalone === true) ||
+    (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+  if (abertoPeloIcone) {
+    window.location.replace(URL_DO_SISTEMA);
+  }
 </script>
 
 <link rel="icon" type="image/png" href="favicon.png">
